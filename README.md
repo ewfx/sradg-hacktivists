@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Hacktivists - Smarter Reconciliation And Anomaly Detection Using Gen AI
 
 ## 📌 Table of Contents
 
@@ -20,27 +20,42 @@ The objective of this project is to compare 2 data sources and historical data a
 
 ## 🎥 Demo
 
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) Video demo is present in the demo folder under arifacts folder.
+🔗 [Live Demo](#) Video demo is present in the demo folder under arifacts folder.
+📹 [Video Demo](#)Video demo is present in the demo folder under arifacts folder.
 🖼️ Screenshots:
 
 ![Screenshot 1](link-to-image)
 
 ## 💡 Inspiration
 
-What inspired you to create this project? Describe the problem you're solving.
+Anomaly detection is very critical as far as banking sectors are concerned. When some fund is transferred from a source account to a target account, anomaly detection is very much neessary in order to come up with a smart reconciliation process. The criticality of the problem statement has inspired me to come up with a smart reconciliation process using Gen AI.
 
 ## ⚙️ What It Does
 
-Explain the key features and functionalities of your project.
+Our project takes two excel files as input. One excel file is for the real time data and another excel file is related to the historical data. Then it finds out the balance differences between the 2 source systems and accordingly, comes up with the match status 'Match' or 'Break'. In case of breaks, our solution checks the historical data in order to find out the anomalies for different combinations of scenarios. After detecting the anomalies, it takes help of the respective LLM(large Language Model) to get the comments or corrective actions for the abnormal breaks i.e. the anomalies and also for the normal breaks. For interacting with the LLM, our solution uses well crafted prompt in order to ensure consistent desired response from the LLM.
 
 ## 🛠️ How We Built It
 
-Briefly outline the technologies, frameworks, and tools used in development.
+We have proposed 2 approaches here.
+For the first approach, we have created a web app through which we are uploading two excel files for real time data and historical data. When the 2 excel files are uploaded, one endpoint gets triggered and this endpoint is responsible for performing all the necessary operations to determine anomalies and comments. In return, the endpoint returns one resposne json based on which the results get displayed in a tabular format in UI.
+For the second approach, we can run one python script which takes 2 excel files for the real time data and historical data and generates one output file which contains all the necessary derived columns like Balance Difference, Match Status, Anomaly and Comments.
+
+For both the approaches mentioned above, we have ceated an Agentic AI which is responsible for running a workflow using Langgraph framework.
+
+The following technologies and frameworks have been used for the approaches mentioned above.
+
+- 🔹 Frontend: React
+- 🔹 Backend: Python / FastAPI
+- 🔹 LLM Framework: Langgraph
+- 🔹 Other Library: Pandas / Material UI
 
 ## 🚧 Challenges We Faced
 
-Describe the major technical or non-technical challenges your team encountered.
+The challenges that we faced during the development are mentioned below.
+
+- 🔹Determining the different combination of patterns in the dataset.
+- 🔹Constructing the prompt to get the uniform desired response from the respective LLM based on the category of break and anomaly.
+- 🔹Implementation of Agentic AI using Langgraph for the solution.
 
 ## 🏃 How to Run
 
