@@ -21,7 +21,7 @@ The objective of this project is to compare 2 data sources and historical data a
 ## 🎥 Demo
 
 🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
+📹 [Video Demo](#) Video demo is present in the demo folder under arifacts folder.
 🖼️ Screenshots:
 
 ![Screenshot 1](link-to-image)
